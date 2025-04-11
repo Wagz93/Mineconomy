@@ -1,0 +1,117 @@
+name: Mineconomy
+version: '1.0.0'
+main: fr.minefest.mineconomy.Mineconomy
+api-version: '1.20'
+depend: [Minefest, PlaceholderAPI]
+authors: [Minefest]
+description: Système économique pour Minefest - Banques d'équipe et Shops
+
+commands:
+  shop:
+    description: Ouvre le shop principal
+    usage: /shop
+    permission: minefestshop.user.shop
+  
+  daily:
+    description: Ouvre le shop du jour
+    usage: /daily
+    permission: minefestshop.user.daily
+  
+  money:
+    description: Affiche le solde de la banque d'équipe
+    usage: /money [joueur|équipe]
+    permission: minefestshop.command.money
+  
+  tba:
+    description: Commandes d'administration des banques d'équipe
+    usage: /tba <create|give|set|remove> [arguments]
+    permission: minefestshop.admin.bank
+  
+  shopadmin:
+    description: Commandes d'administration du shop
+    usage: /shopadmin <setday|reload|resetcontributions> [arguments]
+    permission: minefestshop.admin
+  
+  bankstats:
+    description: Statistiques et classements des banques
+    usage: /bankstats <top|contributors|rank> [arguments]
+    permission: minefestshop.admin.stats
+    
+  mfshop:
+    description: Commandes console pour le shop
+    usage: /mfshop <open|sync|info> [arguments]
+    permission: minefestshop.admin.console
+
+permissions:
+  minefestshop.user.shop:
+    description: Permet d'utiliser le shop principal
+    default: true
+  
+  minefestshop.user.daily:
+    description: Permet d'utiliser le shop journalier
+    default: true
+  
+  minefestshop.command.money:
+    description: Permet de voir son solde
+    default: true
+  
+  minefestshop.command.money.others:
+    description: Permet de voir le solde des autres
+    default: op
+  
+  minefestshop.admin:
+    description: Permet d'utiliser toutes les commandes d'administration
+    default: op
+    children:
+      minefestshop.admin.bank: true
+      minefestshop.admin.shop.setday: true
+      minefestshop.admin.reload: true
+      minefestshop.admin.resetcontributions: true
+      minefestshop.admin.console: true
+      minefestshop.admin.stats: true
+      minefestshop.command.money.others: true
+  
+  minefestshop.admin.bank:
+    description: Permet d'utiliser les commandes d'administration des banques
+    default: op
+    children:
+      minefestshop.admin.bank.create: true
+      minefestshop.admin.bank.give: true
+      minefestshop.admin.bank.set: true
+      minefestshop.admin.bank.remove: true
+  
+  minefestshop.admin.bank.create:
+    description: Permet de créer un type de banque
+    default: op
+  
+  minefestshop.admin.bank.give:
+    description: Permet d'ajouter de l'argent à une banque d'équipe
+    default: op
+  
+  minefestshop.admin.bank.set:
+    description: Permet de définir le solde d'une banque d'équipe
+    default: op
+  
+  minefestshop.admin.bank.remove:
+    description: Permet de retirer de l'argent d'une banque d'équipe
+    default: op
+  
+  minefestshop.admin.shop.setday:
+    description: Permet de changer le jour du shop journalier
+    default: op
+  
+  minefestshop.admin.reload:
+    description: Permet de recharger le plugin
+    default: op
+  
+  minefestshop.admin.resetcontributions:
+    description: Permet de réinitialiser les contributions des joueurs
+    default: op
+    
+  minefestshop.admin.console:
+    description: Permet d'utiliser les commandes console
+    default: op
+  
+  minefestshop.admin.stats:
+    description: Permet d'utiliser les commandes de statistiques
+    default: op

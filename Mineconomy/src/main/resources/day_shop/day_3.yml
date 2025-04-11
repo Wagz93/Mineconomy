@@ -1,0 +1,32 @@
+# Configuration pour le Jour 3
+
+items:
+  REDSTONE:
+    price: 10.0
+    team_sell_limit: 256
+    gui_slot: 10
+    gui_item:
+      material: REDSTONE
+      name: "&c&lRedstone du Mercredi"
+      lore:
+        - "&7De la redstone de haute qualité"
+  
+  DIAMOND:
+    price: 120.0
+    team_sell_limit: 32
+    gui_slot: 12
+    gui_item:
+      material: DIAMOND
+      name: "&b&lDiamant du Mercredi"
+      lore:
+        - "&7Un diamant spécial du mercredi"
+  
+  GOLD_INGOT:
+    price: 35.0
+    team_sell_limit: 128
+    gui_slot: 14
+    gui_item:
+      material: GOLD_INGOT
+      name: "&e&lLingot d'Or du Mercredi"
+      lore:
+        - "&7Un lingot d'or raffiné"

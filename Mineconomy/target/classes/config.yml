@@ -1,0 +1,57 @@
+# Configuration principale de Mineconomy
+
+# Configuration de la banque par défaut
+bank:
+  default_name: "Minefest"
+  default_currency_symbol: "€"
+
+# Configuration des GUI
+gui:
+  shop_rows: 6
+  daily_shop_rows: 6
+  fill_item: "AIR"
+  sell_all_item: "GOLD_INGOT"
+  info_item: "BOOK"
+
+# Configuration des paliers de prix dynamiques
+dynamic_pricing:
+  DIAMOND:
+    minimum_multiplier: 0.5
+    tiers:
+      1:
+        sold_threshold: 1000
+        price_multiplier: 0.9
+      2:
+        sold_threshold: 5000
+        price_multiplier: 0.75
+
+  IRON_INGOT:
+    minimum_multiplier: 0.6
+    tiers:
+      1:
+        sold_threshold: 10000
+        price_multiplier: 0.8
+
+  GOLD_INGOT:
+    minimum_multiplier: 0.5
+    tiers:
+      1:
+        sold_threshold: 5000
+        price_multiplier: 0.85
+      2:
+        sold_threshold: 20000
+        price_multiplier: 0.7
+
+  REDSTONE:
+    minimum_multiplier: 0.7
+    tiers:
+      1:
+        sold_threshold: 15000
+        price_multiplier: 0.8
+
+  COAL:
+    minimum_multiplier: 0.6
+    tiers:
+      1:
+        sold_threshold: 20000
+        price_multiplier: 0.75

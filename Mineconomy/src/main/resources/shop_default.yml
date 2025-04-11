@@ -1,0 +1,72 @@
+# Configuration du shop principal
+
+items:
+  DIAMOND:
+    base_price: 100.0
+    use_dynamic_pricing: true
+    gui_slot: 10
+    gui_item:
+      material: DIAMOND
+      name: "&b&lDiamant"
+      lore:
+        - "&7Un diamant brillant"
+  
+  IRON_INGOT:
+    base_price: 10.0
+    use_dynamic_pricing: true
+    gui_slot: 11
+    gui_item:
+      material: IRON_INGOT
+      name: "&f&lLingot de Fer"
+      lore:
+        - "&7Un lingot de fer"
+  
+  GOLD_INGOT:
+    base_price: 25.0
+    use_dynamic_pricing: true
+    gui_slot: 12
+    gui_item:
+      material: GOLD_INGOT
+      name: "&e&lLingot d'Or"
+      lore:
+        - "&7Un lingot d'or"
+  
+  EMERALD:
+    base_price: 150.0
+    use_dynamic_pricing: false
+    gui_slot: 13
+    gui_item:
+      material: EMERALD
+      name: "&a&lÉmeraude"
+      lore:
+        - "&7Une émeraude précieuse"
+  
+  COAL:
+    base_price: 2.0
+    use_dynamic_pricing: true
+    gui_slot: 14
+    gui_item:
+      material: COAL
+      name: "&8&lCharbon"
+      lore:
+        - "&7Un morceau de charbon"
+  
+  LAPIS_LAZULI:
+    base_price: 15.0
+    use_dynamic_pricing: false
+    gui_slot: 15
+    gui_item:
+      material: LAPIS_LAZULI
+      name: "&9&lLapis Lazuli"
+      lore:
+        - "&7Un cristal de lapis lazuli"
+  
+  REDSTONE:
+    base_price: 5.0
+    use_dynamic_pricing: true
+    gui_slot: 16
+    gui_item:
+      material: REDSTONE
+      name: "&c&lRedstone"
+      lore:
+        - "&7De la poudre de redstone"

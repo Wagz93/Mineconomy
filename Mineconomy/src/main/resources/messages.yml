@@ -1,0 +1,123 @@
+# Messages de Mineconomy
+
+prefix: "&8[&bMinefestShop&8] "
+
+# Messages d'erreur
+error:
+  no_permission: "&cVous n'avez pas la permission d'utiliser cette commande."
+  player_only: "&cCette commande ne peut être utilisée que par un joueur."
+  no_team: "&cVous n'êtes pas dans une équipe."
+  player_no_team: "&cCe joueur n'est pas dans une équipe."
+  player_not_found: "&cJoueur introuvable."
+  team_not_found: "&cÉquipe introuvable."
+  invalid_item: "&cCet item n'est pas valide."
+  not_enough_items: "&cVous n'avez pas assez d'items dans votre inventaire."
+  team_limit_reached: "&cVotre équipe a atteint la limite de vente pour cet item aujourd'hui."
+  transaction_failed: "&cLa transaction a échoué. Contactez un administrateur."
+  invalid_number: "&cVeuillez entrer un nombre valide."
+  positive_number: "&cLe montant doit être positif."
+  daily_shop_unavailable: "&cLe shop du jour n'est pas disponible actuellement."
+  bank_not_found: "&cCette banque n'existe pas."
+  day_range: "&cLe jour doit être compris entre 1 et 7."
+
+# Messages du shop principal
+shop:
+  sell_success: "&aVous avez vendu &e%quantity% %item% &apour &e%price% &aà votre équipe &e%team%&a."
+  sell_all_success: "&aVous avez vendu &e%quantity% &aitems pour &e%price% &aà votre équipe &e%team%&a."
+  nothing_to_sell: "&cVous n'avez rien à vendre."
+
+# Messages du shop journalier
+daily:
+  sell_success: "&aVous avez vendu &e%quantity% %item% &apour &e%price% &aà votre équipe &e%team%&a. Il reste &e%remaining% &aitems vendables aujourd'hui."
+
+# Messages de la commande Money
+money:
+  header: "&e=== Soldes de l'équipe %team% ==="
+  account_info: "&a%bank%: &e%balance% &7(Rang: %rank%, Contribution: %contribution%)"
+  account_info_team: "&a%bank%: &e%balance% &7(Rang: %rank%)"
+  no_accounts: "&cVotre équipe n'a pas de comptes bancaires."
+  no_accounts_team: "&cL'équipe %team% n'a pas de comptes bancaires."
+  usage:
+    header: "&e=== Commande Money ==="
+    self: "&a/money &7- Affiche les soldes de votre équipe"
+    others: "&a/money <joueur|équipe> &7- Affiche les soldes d'une équipe"
+
+# Messages des commandes TBA
+command:
+  tba:
+    create:
+      usage: "&cUtilisation: /tba create <nom_banque> [symbole_devise] [default:true/false]"
+      success: "&aBanque &e%bank% &acréée avec succès. Symbole: &e%currency%&a. Défaut: &e%default%&a."
+      failed: "&cImpossible de créer la banque. Vérifiez les logs."
+    
+    give:
+      usage: "&cUtilisation: /tba give <nom_équipe|joueur> <nom_banque> <montant>"
+      success: "&aVous avez ajouté &e%amount% &aau compte &e%bank% &ade l'équipe &e%team%&a."
+      failed: "&cImpossible d'ajouter de l'argent. Vérifiez les logs."
+    
+    set:
+      usage: "&cUtilisation: /tba set <nom_équipe|joueur> <nom_banque> <montant>"
+      success: "&aVous avez défini le solde du compte &e%bank% &ade l'équipe &e%team% &aà &e%amount%&a."
+      failed: "&cImpossible de définir le solde. Vérifiez les logs."
+    
+    remove:
+      usage: "&cUtilisation: /tba remove <nom_équipe|joueur> <nom_banque> <montant>"
+      success: "&aVous avez retiré &e%amount% &adu compte &e%bank% &ade l'équipe &e%team%&a."
+      failed: "&cImpossible de retirer de l'argent. Vérifiez les logs."
+    
+    help:
+      header: "&e=== Commandes TBA ==="
+      create: "&a/tba create <nom_banque> [symbole_devise] [default] &7- Crée un type de banque"
+      give: "&a/tba give <nom_équipe|joueur> <nom_banque> <montant> &7- Ajoute de l'argent"
+      set: "&a/tba set <nom_équipe|joueur> <nom_banque> <montant> &7- Définit le solde"
+      remove: "&a/tba remove <nom_équipe|joueur> <nom_banque> <montant> &7- Retire de l'argent"
+
+# Messages des commandes ShopAdmin
+  shopadmin:
+    setday:
+      usage: "&cUtilisation: /shopadmin setday <1-7>"
+      success: "&aVous avez défini le jour du shop journalier à &e%day%&a."
+    
+    reload:
+      success: "&aConfiguration rechargée avec succès."
+    
+    resetcontributions:
+      success_all: "&aToutes les contributions ont été réinitialisées."
+      success_bank: "&aLes contributions pour la banque &e%bank% &aont été réinitialisées."
+    
+    help:
+      header: "&e=== Commandes ShopAdmin ==="
+      setday: "&a/shopadmin setday <1-7> &7- Change le jour du shop journalier"
+      reload: "&a/shopadmin reload &7- Recharge la configuration"
+      resetcontributions: "&a/shopadmin resetcontributions [nom_banque] &7- Réinitialise les contributions"
+
+# Messages des commandes BankStats
+  bankstats:
+    top:
+      usage: "&cUtilisation: /bankstats top <nom_banque> <nombre>"
+      header: "&e=== Top %bank% ==="
+      entry: "&e#%rank%. &a%team%: &e%balance%"
+      no_data: "&cAucune donnée disponible."
+    
+    contributors:
+      usage: "&cUtilisation: /bankstats contributors <équipe> <banque>"
+      top: "&aLe meilleur contributeur de l'équipe &e%team% &apour la banque &e%bank% &aest &e%player% &aavec &e%amount%&a."
+      no_data: "&cAucune donnée de contribution disponible."
+    
+    rank:
+      usage: "&cUtilisation: /bankstats rank <nom_banque>"
+      header: "&e=== Classement %bank% ==="
+      entry: "&e#%rank%. &a%team%: &e%balance%"
+      more: "&7... et %count% autres équipes"
+      no_data: "&cAucune donnée disponible."
+    
+    help:
+      header: "&e=== Commandes BankStats ==="
+      top: "&a/bankstats top <nom_banque> <nombre> &7- Affiche les meilleures équipes"
+      contributors: "&a/bankstats contributors <équipe> <banque> &7- Affiche le meilleur contributeur"
+      rank: "&a/bankstats rank <nom_banque> &7- Affiche le classement complet"
+
+# Titres des GUI
+gui:
+  shop: "&8⚒ &bShop Principal &8⚒"
+  daily_shop: "&8⚒ &eShop du Jour &8⚒"

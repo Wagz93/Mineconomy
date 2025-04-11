@@ -1,0 +1,32 @@
+# Configuration pour le Jour 7
+
+items:
+  DIAMOND:
+    price: 250.0
+    team_sell_limit: 16
+    gui_slot: 10
+    gui_item:
+      material: DIAMOND
+      name: "&b&lDiamant du Dimanche"
+      lore:
+        - "&7Un diamant exceptionnel"
+  
+  GOLD_INGOT:
+    price: 50.0
+    team_sell_limit: 32
+    gui_slot: 12
+    gui_item:
+      material: GOLD_INGOT
+      name: "&e&lLingot d'Or du Dimanche"
+      lore:
+        - "&7Un lingot d'or divin"
+  
+  EMERALD:
+    price: 300.0
+    team_sell_limit: 2
+    gui_slot: 14
+    gui_item:
+      material: EMERALD
+      name: "&a&lÉmeraude du Dimanche"
+      lore:
+        - "&7Une émeraude extraordinaire"

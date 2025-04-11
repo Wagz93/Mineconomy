@@ -1,0 +1,32 @@
+# Configuration pour le Jour 2
+
+items:
+  EMERALD:
+    price: 200.0
+    team_sell_limit: 32
+    gui_slot: 10
+    gui_item:
+      material: EMERALD
+      name: "&a&lÉmeraude du Mardi"
+      lore:
+        - "&7Une émeraude très précieuse"
+  
+  COAL:
+    price: 5.0
+    team_sell_limit: 1024
+    gui_slot: 12
+    gui_item:
+      material: COAL
+      name: "&8&lCharbon du Mardi"
+      lore:
+        - "&7Du charbon de qualité supérieure"
+  
+  LAPIS_LAZULI:
+    price: 25.0
+    team_sell_limit: 128
+    gui_slot: 14
+    gui_item:
+      material: LAPIS_LAZULI
+      name: "&9&lLapis Lazuli du Mardi"
+      lore:
+        - "&7Un cristal de lapis pur"

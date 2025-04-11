@@ -1,0 +1,32 @@
+# Configuration pour le Jour 6
+
+items:
+  GOLD_INGOT:
+    price: 40.0
+    team_sell_limit: 64
+    gui_slot: 10
+    gui_item:
+      material: GOLD_INGOT
+      name: "&e&lLingot d'Or du Samedi"
+      lore:
+        - "&7Un lingot d'or pur"
+  
+  IRON_INGOT:
+    price: 20.0
+    team_sell_limit: 128
+    gui_slot: 12
+    gui_item:
+      material: IRON_INGOT
+      name: "&f&lLingot de Fer du Samedi"
+      lore:
+        - "&7Un lingot de fer rare"
+  
+  EMERALD:
+    price: 250.0
+    team_sell_limit: 4
+    gui_slot: 14
+    gui_item:
+      material: EMERALD
+      name: "&a&lÉmeraude du Samedi"
+      lore:
+        - "&7Une émeraude parfaite"
